@@ -1,0 +1,122 @@
+
+/* Raghad Talal Qwaider */
+/* 2301214228 */
+
+/* CSS Variables */
+:root {
+    --primary-color: #4caf50;
+    --secondary-color: #2196f3;
+    --bg-dark: #0f0f1a;
+    --bg-card: #1a1a2e;
+    --text-color: white;
+    --border-radius: 12px;
+    --transition: all 0.3s ease;
+}
+
+/* Portfolio Section */
+.portfolio-section {
+    background-color: var(--bg-dark);
+    color: var(--text-color);
+    padding: 50px 20px;
+    text-align: center;
+}
+
+/* Portfolio Title */
+.portfolio-title {
+    color: var(--primary-color);
+    font-size: 32px;
+    animation: fadeInUp 1s ease-out;
+}
+
+/* Portfolio Description */
+.portfolio-description {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+/* Projects Layout */
+.portfolio-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Project Cards */
+.project-card {
+    background-color: var(--bg-card);
+    color: var(--text-color);
+    padding: 25px;
+    width: 250px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: var(--transition);
+    animation: fadeInUp 1s ease-out both;
+}
+
+/* Transform on Hover */
+.project-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 10px 25px rgba(76, 175, 80, 0.4);
+}
+
+/* Project Headings */
+.project-card h3 {
+    color: var(--primary-color);
+}
+
+/* Portfolio Buttons */
+.portfolio-btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 20px;
+    margin-top: 15px;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: var(--transition);
+}
+
+/* Button Hover */
+.portfolio-btn:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-3px);
+}
+
+/* CSS Animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animation Delays */
+.project-card:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.project-card:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.project-card:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .portfolio-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-card {
+        width: 80%;
+    }
+}
